@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <Version Value="9"/>
+    <BuildModes Active="Release"/>
+    <Units Count="8">
+      <Unit0>
+        <Filename Value="SnakeGame.pas"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="82"/>
+        <CursorPos Y="86"/>
+        <UsageCount Value="30"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="unit1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Unit1"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="192"/>
+        <CursorPos X="57" Y="195"/>
+        <UsageCount Value="30"/>
+        <Loaded Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="/usr/share/fpcsrc/3.0.0/rtl/objpas/classes/classesh.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="653"/>
+        <CursorPos X="15" Y="683"/>
+        <UsageCount Value="10"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="../../VST/CGE/castle-engine/src/base/castlerandom.pas"/>
+        <UnitName Value="CastleRandom"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="48"/>
+        <CursorPos X="3" Y="44"/>
+        <UsageCount Value="9"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="../../VST/CGE/castle-engine/src/audio/castlesoundengine.pas"/>
+        <UnitName Value="CastleSoundEngine"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1937"/>
+        <CursorPos X="5" Y="1957"/>
+        <UsageCount Value="10"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="../../VST/CGE/castle-engine/src/net/castledownload.pas"/>
+        <UnitName Value="CastleDownload"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="100"/>
+        <CursorPos X="23" Y="105"/>
+        <UsageCount Value="10"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="../../VST/CGE/castle-engine/src/ui/castlekeysmouse.pas"/>
+        <UnitName Value="CastleKeysMouse"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="451"/>
+        <CursorPos X="8" Y="492"/>
+        <UsageCount Value="10"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="E:/PROGR/lazarus/fpc/3.0.0/source/packages/fcl-sdo/src/base/sdo_date_utils.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="21"/>
+        <CursorPos X="53" Y="35"/>
+        <UsageCount Value="10"/>
+      </Unit7>
+    </Units>
+    <JumpHistory Count="30" HistoryIndex="28">
+      <Position1>
+        <Filename Value="SnakeGame.pas"/>
+        <Caret Line="118" Column="7" TopLine="101"/>
+      </Position1>
+      <Position2>
+        <Filename Value="SnakeGame.pas"/>
+        <Caret Line="120" Column="3" TopLine="103"/>
+      </Position2>
+      <Position3>
+        <Filename Value="SnakeGame.pas"/>
+        <Caret Line="109" Column="31"/>
+      </Position3>
+      <Position4>
+        <Filename Value="SnakeGame.pas"/>
+        <Caret Line="118" Column="25" TopLine="109"/>
+      </Position4>
+      <Position5>
+        <Filename Value="SnakeGame.pas"/>
+        <Caret Line="182" Column="20" TopLine="167"/>
+      </Position5>
+      <Position6>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="282" Column="4" TopLine="269"/>
+      </Position6>
+      <Position7>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="286" Column="3" TopLine="269"/>
+      </Position7>
+      <Position8>
+        <Filename Value="SnakeGame.pas"/>
+        <Caret Line="89" TopLine="85"/>
+      </Position8>
+      <Position9>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="291" TopLine="278"/>
+      </Position9>
+      <Position10>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="73" Column="24" TopLine="61"/>
+      </Position10>
+      <Position11>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="275" Column="7" TopLine="263"/>
+      </Position11>
+      <Position12>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="297" Column="5" TopLine="277"/>
+      </Position12>
+      <Position13>
+        <Filename Value="SnakeGame.pas"/>
+        <Caret Line="11" Column="13"/>
+      </Position13>
+      <Position14>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="269" TopLine="260"/>
+      </Position14>
+      <Position15>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="287" TopLine="278"/>
+      </Position15>
+      <Position16>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="85" TopLine="73"/>
+      </Position16>
+      <Position17>
+        <Filename Value="SnakeGame.pas"/>
+        <Caret Line="49" Column="42" TopLine="39"/>
+      </Position17>
+      <Position18>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="287" Column="76" TopLine="277"/>
+      </Position18>
+      <Position19>
+        <Filename Value="SnakeGame.pas"/>
+        <Caret Line="96" Column="24" TopLine="85"/>
+      </Position19>
+      <Position20>
+        <Filename Value="SnakeGame.pas"/>
+        <Caret Line="111" TopLine="93"/>
+      </Position20>
+      <Position21>
+        <Filename Value="SnakeGame.pas"/>
+        <Caret Line="97" Column="37" TopLine="96"/>
+      </Position21>
+      <Position22>
+        <Filename Value="SnakeGame.pas"/>
+        <Caret Line="149" Column="33" TopLine="146"/>
+      </Position22>
+      <Position23>
+        <Filename Value="SnakeGame.pas"/>
+        <Caret Line="86" Column="24" TopLine="77"/>
+      </Position23>
+      <Position24>
+        <Filename Value="SnakeGame.pas"/>
+        <Caret Line="88" Column="31" TopLine="76"/>
+      </Position24>
+      <Position25>
+        <Filename Value="SnakeGame.pas"/>
+        <Caret Line="87" Column="13" TopLine="78"/>
+      </Position25>
+      <Position26>
+        <Filename Value="SnakeGame.pas"/>
+        <Caret Line="167" Column="10" TopLine="155"/>
+      </Position26>
+      <Position27>
+        <Filename Value="SnakeGame.pas"/>
+        <Caret Line="11" Column="14"/>
+      </Position27>
+      <Position28>
+        <Filename Value="SnakeGame.pas"/>
+        <Caret Line="90" Column="6" TopLine="73"/>
+      </Position28>
+      <Position29>
+        <Filename Value="SnakeGame.pas"/>
+        <Caret Line="32" Column="33" TopLine="25"/>
+      </Position29>
+      <Position30>
+        <Filename Value="SnakeGame.pas"/>
+        <Caret Line="7"/>
+      </Position30>
+    </JumpHistory>
+  </ProjectSession>
+</CONFIG>
