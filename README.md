@@ -1,6 +1,6 @@
 # SnakeGame
 
-This is an example of a very simple game featuring:
+This is an thoroughly-commented example of a very simple 2D game featuring:
 * graphics with spritesheets,
 * text output,
 * keyboard/mouse input,
@@ -8,7 +8,7 @@ This is an example of a very simple game featuring:
 * sound & music,
 * timer,
 * Log,
-* random -
+* random
 basically everything you might need to start making a simple 2D game in Castle Game Engine.
 
 You'll have to put Castle Game Engine dll's in the system PATH on Windows or keep them in game folder
@@ -26,3 +26,4 @@ zlib1g-dev
 libvorbis-dev
 libgtkglext1-dev
 
+https://github.com/eugeneloza/SnakeGame
