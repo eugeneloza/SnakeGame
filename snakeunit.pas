@@ -93,7 +93,7 @@ begin
   repeat
     x := random(maxx);
     y := random(maxy);
-  until snake.detectCollision(x,y)=false;   //to avoid plaicing rabbit inside the snake
+  until (snake.detectCollision(x,y)=false) or (snake.tail.count=(maxx+1)*(maxy+1));   //to avoid plaicing rabbit inside the snake
 end;
 
 {get sprite number for straight direction}
@@ -265,6 +265,7 @@ var i: integer;
 begin
   result := false;
   {detects if point (tx,ty) collides with any segment of the snake tail}
+  //we don't check snake tail end
   for i := 1 to tail.count-1 do
     if (tail[i].x = tx) and (tail[i].y = ty) then begin
       result := true;
