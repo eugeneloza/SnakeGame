@@ -8,7 +8,7 @@ program SnakeGame;
 
 uses SysUtils, Math, CastleWindow, CastleFilesUtils, CastleKeysMouse,
    CastleGLImages, CastleGLUtils, CastleVectors, CastleControls,
-   CastleLog,
+   CastleLog, castle_window,
    SnakeUnit;
 
 { scale of the source sprites and their scaled version size at the screen }

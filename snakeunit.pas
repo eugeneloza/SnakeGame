@@ -6,7 +6,7 @@ interface
 
 Uses Classes, fgl,
   CastleSoundEngine,
-  CastleXMLConfig;
+  CastleConfig;
 
 Type
   {creates and stores rabbit coordinates}
@@ -290,14 +290,14 @@ begin
  freeAndNil(MyStrings);
 
  // read user configuration and looks for string "best_score"
- //UserConfig.Load;
-// BestScore := UserConfig.GetValue('best_score', round(sqrt(maxx*maxy*2)));
+ UserConfig.Load;
+ BestScore := UserConfig.GetValue('best_score', round(2*sqrt((maxx+1)*(maxy+1))));
 end;
 
 procedure WriteHighScore;
 begin
-//  UserConfig.SetValue('best_score', BestScore);
-//  UserConfig.Save;
+  UserConfig.SetValue('best_score', BestScore);
+  UserConfig.Save;
 end;
 
 {start a new game}
