@@ -6,10 +6,10 @@ program SnakeGame;
 {I highly recommend preforming range-checking during development}
 {$R+}{$Q+}
 
-uses SysUtils, Math, castle_base, CastleWindow, CastleFilesUtils, CastleKeysMouse,
-   CastleGLImages, CastleGLUtils, CastleVectors, CastleRandom, CastleControls,
+uses SysUtils, Math, CastleWindow, CastleFilesUtils, CastleKeysMouse,
+   CastleGLImages, CastleGLUtils, CastleVectors, CastleControls,
    CastleLog,
-   Unit1;
+   SnakeUnit;
 
 { scale of the source sprites and their scaled version size at the screen }
 const
@@ -46,7 +46,7 @@ begin
   {We use UIFont defined in CastleControls unit as a "basic" font}
 
   {Show music CC-BY-SA credit :)}
-  UIFont.Print(0,Window.Height-18,Vector4Single(0,0.6,0.2,1),'Music by Metaruka @ opengameart.org');
+  UIFont.Print(0,Window.Height-18,Vector4Single(0,0.6,0.2,1),license_string);
 
   //draw rabbit
   SnakeImage.draw(rabbit.x*DestinationScale,rabbit.y*DestinationScale,DestinationScale,DestinationScale,
@@ -130,7 +130,7 @@ begin
   {create window}
   Window := TCastleWindowCustom.create(Application);
   {initialize random sequence}
-  RND := TCastleRandom.create;
+  randomize;
 
   {map size is 16x16}
   maxx := 15;
@@ -154,7 +154,8 @@ begin
 
   {set up window events callbacks}
   Window.OnRender := @WindowRender;
-  window.OnPress := @KeyPress;
+  Window.OnPress := @KeyPress;
+  Window.ResizeAllowed := raNotAllowed;
 
   {set up application timer}
   {this event will fire once every TimerMilisec (i.e. 300 msec)
@@ -180,6 +181,5 @@ begin
   {don't forget to free everything that is not freed automatically}
   FreeAndNil(SnakeImage);
   FreeAndNil(SnakeFlipImage);
-  FreeAndNil(RND);
 end.
 

@@ -1,12 +1,12 @@
-unit Unit1;
+unit SnakeUnit;
 
 {$mode objfpc}{$H+}
 
 interface
 
 Uses Classes, fgl,
-  CastleOpenAL, CastleSoundEngine,
-  CastleRandom;
+  CastleSoundEngine,
+  CastleXMLConfig;
 
 Type
   {creates and stores rabbit coordinates}
@@ -66,12 +66,12 @@ type
 var maxx,maxy: integer;
     Snake: TSnake;
     Rabbit: TRabbit;
-    Rnd: TCastleRandom;
     GameOver: boolean;
     score, bestscore: integer;
     {sounds and music to be used in game}
     EatSound,EndSound,music: TSoundBuffer;
-    PlaySound: boolean;
+    PlaySound: boolean; //sound on/off
+    license_string: string;
 
 {read high score from a file.}
 procedure ReadHighScore;
@@ -91,8 +91,8 @@ uses SysUtils, castleVectors, castleFilesUtils, CastleDownload;
 procedure TRabbit.ResetRabbit;
 begin
   repeat
-    x := RND.random(maxx);
-    y := RND.random(maxy);
+    x := random(maxx);
+    y := random(maxy);
   until snake.detectCollision(x,y)=false;   //to avoid plaicing rabbit inside the snake
 end;
 
@@ -171,12 +171,12 @@ begin
   {detect collision with screen borders and deflect the snake randomly}
   if (x+next_dx<0) or (x+next_dx>maxx) then begin
     next_dx := 0;
-    if RND.RandomBoolean then next_dy := 1 else next_dy := -1;
+    if random(2)=0 then next_dy := 1 else next_dy := -1;
     if (y+next_dy<0) or (y+next_dy>maxy) then next_dy := - next_dy
   end;
   if (y+next_dy<0) or (y+next_dy>maxy) then begin
     next_dy := 0;
-    if RND.RandomBoolean then next_dx := 1 else next_dx := -1;
+    if random(2)=0 then next_dx := 1 else next_dx := -1;
     if (x+next_dx<0) or (x+next_dx>maxx) then  next_dx := -next_dx;
   end;
 
@@ -272,37 +272,31 @@ begin
     end;
 end;
 
-{read high score from a file. We don't handle "file not found" error here}
+{read a text file for license and read user config for highscore}
 procedure ReadHighScore;
 var FileStream: TStream;
     MyStrings: TStringList;
 begin
  //create the stream to "download"
- FileStream := Download(ApplicationData('HighScore.txt'));
+ {ApplicationData files should be treated as read-only in most cases}
+ FileStream := Download(ApplicationData('license.txt'));
  //create and load TStringList from the stream
  MyStrings := TStringList.create;
  MyStrings.LoadFromStream(FileStream);
- bestscore := strtoint(MyStrings[0]);
+ license_string := MyStrings[0];
  //clean up everything
  freeAndNil(FileStream);
  freeAndNil(MyStrings);
+
+ // read user configuration and looks for string "best_score"
+ //UserConfig.Load;
+// BestScore := UserConfig.GetValue('best_score', round(sqrt(maxx*maxy*2)));
 end;
 
-{Write High score to a file. We don't check if the file exists and writable}
 procedure WriteHighScore;
-var FileStream: TStream;
-    MyStrings: TStringList;
 begin
- if score > bestScore then bestScore := score;
- //create the stream to "upload"
- FileStream := URLSaveStream(ApplicationData('HighScore.txt'));
- //create and write TStringList to the stream
- MyStrings := TStringList.create;
- MyStrings.Add(inttostr(bestscore));
- MyStrings.SaveToStream(FileStream);
- //clean up everything
- freeAndNil(FileStream);
- freeAndNil(MyStrings);
+//  UserConfig.SetValue('best_score', BestScore);
+//  UserConfig.Save;
 end;
 
 {start a new game}
