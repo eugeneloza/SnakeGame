@@ -138,7 +138,7 @@ begin
 
   {set the appropriate window size}
   Window.Width := (maxx+1)*destinationScale;
-  Window.Height := (maxx+1)*destinationScale;
+  Window.Height := (maxy+1)*destinationScale;
 
   {load spritesheet / no nice scaling because it's pixelart :)}
   {ApplicationData points to content "data" in a cross-platform way, so that it
