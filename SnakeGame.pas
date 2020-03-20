@@ -30,9 +30,8 @@ program SnakeGame;
 {$R+}{$Q+}
 
 uses
-   SysUtils, Math, CastleWindow, CastleFilesUtils, CastleKeysMouse,
-   CastleGLImages, CastleGLUtils, CastleVectors, CastleControls,
-   CastleLog,
+   SysUtils, Math, CastleWindow, CastleKeysMouse, CastleGLImages, CastleGLUtils,
+   CastleVectors, CastleControls, CastleLog,
    SnakeUnit;
 
 { scale of the source sprites and their scaled version size at the screen }

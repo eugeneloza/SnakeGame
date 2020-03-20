@@ -109,7 +109,7 @@ procedure WriteHighScore;
 
 implementation
 uses
-  SysUtils, CastleVectors, CastleFilesUtils, CastleDownload;
+  SysUtils, CastleVectors, CastleDownload;
 
 procedure TRabbit.ResetRabbit;
 begin
