@@ -103,12 +103,12 @@ begin
   begin
     if Score <= BestScore then
     begin
-      UIFont.Print(Window.Width div 2 - 80,Window.Height div 2 + 15, Vector4(0.2, 0.1, 0, 1), 'GAME OVER!');
-      UIFont.Print(Window.Width div 2 - 80,Window.Height div 2 - 15, Vector4(0.2, 0.1, 0, 1), 'Your Score was: ' + IntToStr(Score));
+      UIFont.Print(Window.Width div 2 - 80, Window.Height div 2 + 15, Vector4(0.2, 0.1, 0, 1), 'GAME OVER!');
+      UIFont.Print(Window.Width div 2 - 80, Window.Height div 2 - 15, Vector4(0.2, 0.1, 0, 1), 'Your Score was: ' + IntToStr(Score));
     end else
     begin
-      UIFont.Print(Window.Width div 2 - 80,Window.Height div 2 + 15, Vector4(1, 1, 0, 1), 'GAME OVER!');
-      UIFont.Print(Window.Width div 2 - 80,Window.Height div 2 - 15, Vector4(1, 1, 0, 1), 'BEST Score: ' + IntToStr(Score));
+      UIFont.Print(Window.Width div 2 - 80, Window.Height div 2 + 15, Vector4(1, 1, 0, 1), 'GAME OVER!');
+      UIFont.Print(Window.Width div 2 - 80, Window.Height div 2 - 15, Vector4(1, 1, 0, 1), 'BEST Score: ' + IntToStr(Score));
     end
   end;
 end;
@@ -133,10 +133,10 @@ begin
     if Event.EventType = itKey then
       {this event is a keyboard event. Detect which button has been pressed}
       case Event.Key of
-        keyUp: Snake.SetDirection(0,  1);
+        keyUp: Snake.SetDirection(0, 1);
         keyDown: Snake.SetDirection(0, -1);
         keyLeft: Snake.SetDirection(-1, 0);
-        keyRight: Snake.SetDirection( 1, 0);
+        keyRight: Snake.SetDirection(1, 0);
         keyM: ToggleMusic;
       end
     else

@@ -169,11 +169,11 @@ procedure TSnake.AddHead; inline;
 var
   TmpTail: TTail;
 begin
-  tmpTail := TTail.Create;
-  tmpTail.x := x;
-  tmpTail.y := y;
-  tmpTail.TailKind := tkHead;
-  tmpTail.Direction := GetDirection(dx, dy);
+  TmpTail := TTail.Create;
+  TmpTail.x := x;
+  TmpTail.y := y;
+  TmpTail.TailKind := tkHead;
+  TmpTail.Direction := GetDirection(dx, dy);
   Tail.Add(tmpTail);
 end;
 
@@ -192,11 +192,11 @@ begin
   Tail.Clear;   //clear Tail
 
   {add Tail end one space back}
-  tmpTail := TTail.Create;
-  tmpTail.x := x - dx;
-  tmpTail.y := y - dy;
-  tmpTail.TailKind := tkTail;
-  tmpTail.Direction := GetDirection(dx, dy);
+  TmpTail := TTail.Create;
+  TmpTail.x := x - dx;
+  TmpTail.y := y - dy;
+  TmpTail.TailKind := tkTail;
+  TmpTail.Direction := GetDirection(dx, dy);
   Tail.Add(tmpTail);
 
   {add head}
@@ -274,7 +274,7 @@ procedure TSnake.FixTail; inline;
 var
   ddx, ddy: Integer;
 begin
-  if Tail.Count>2 then
+  if Tail.Count > 2 then
   begin
     {get type of Tail junction based on ddx and ddy difference between current
      tile (second from the head, which actually replaces previous head).}
@@ -327,7 +327,7 @@ begin
   Result := false;
   {detects if point (tx,ty) collides with any segment of the Snake Tail}
   //we don't check Snake Tail end
-  for i := 1 to Tail.Count-1 do
+  for i := 1 to Tail.Count - 1 do
     if (Tail[i].x = tx) and (Tail[i].y = ty) then
     begin
       Result := true;
@@ -404,11 +404,11 @@ begin
   if PlaySound then
   begin
     PlaySound := false;
-    CurrentMusic.Gain:= 0
+    CurrentMusic.Gain:= 0;
   end else
   begin
     PlaySound := true;
-    CurrentMusic.Gain:= 1
+    CurrentMusic.Gain:= 1;
   end;
 end;
 
