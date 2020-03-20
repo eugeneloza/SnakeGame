@@ -1,0 +1,20 @@
+# Output
+*.exe
+SnakeGame
+*.apk
+
+automatic-windows-resources.res
+castle-auto-generated-resources.res
+*.log
+
+# Build tool generated files
+castle-engine-output
+
+# Lazarus generated files, session stuff
+lib
+*.lps
+*.dbg
+backup
+
+#DLLs
+*.dll
