@@ -41,7 +41,7 @@ const
   DestinationScale = SourceScale * 2;
 
 var { basic CastleWindow }
-    Window: TCastleWindowCustom;
+    Window: TCastleWindowBase;
     { All 16 sprites in one image }
     SnakeImage, SnakeFlipImage: TDrawableImage;
     {create some cheap animation effect}
@@ -73,7 +73,7 @@ begin
   {We use UIFont defined in CastleControls unit as a "basic" font}
 
   {Show music CC-BY-SA credit :)}
-  UIFont.Print(0, Window.Height - 18, Vector4Single(0, 0.6, 0.2, 1), LicenseString);
+  UIFont.Print(0, Window.Height - 18, Vector4(0, 0.6, 0.2, 1), LicenseString);
 
   //draw Rabbit
   SnakeImage.Draw(Rabbit.x * DestinationScale, Rabbit.y * DestinationScale,
@@ -171,7 +171,7 @@ begin
   WriteLnLog('Hello','World!');
 
   {create window}
-  Window := TCastleWindowCustom.Create(Application);
+  Window := TCastleWindowBase.Create(Application);
   {initialize random sequence}
   Randomize;
 
