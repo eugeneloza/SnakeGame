@@ -21,6 +21,10 @@
   SOFTWARE.
 }
 
+{ Note that with toroid field the snake tail is buggy when it's the last
+  part of the snake before leaving the border }
+//{$define ToroidField}
+
 unit SnakeUnit;
 
 {$mode objfpc}{$H+}
@@ -205,7 +209,20 @@ end;
 
 procedure TSnake.Move;
 begin
-  {detect collision with screen borders and deflect the Snake Randomly}
+  {$ifdef ToroidField}
+  { warp snake at the borders of the field aka toroid }
+  if (x + next_dx < 0) then
+    x := MaxX + 1
+  else
+  if (x + next_dx > MaxX) then
+    x := -1;
+  if (y + next_dy < 0) then
+    y := MaxY + 1
+  else
+  if (y + next_dy > MaxY) then
+    y := -1;
+  {$else}
+  { detect collision with screen borders and deflect the Snake randomly }
   if (x + next_dx < 0) or (x + next_dx > MaxX) then
   begin
     next_dx := 0;
@@ -226,6 +243,7 @@ begin
     if (x + next_dx < 0) or (x + next_dx > MaxX) then
       next_dx := -next_dx;
   end;
+  {$endif}
 
   {assign new dx,dy}
   dx := next_dx;
